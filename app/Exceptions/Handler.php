@@ -26,5 +26,9 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+
+        $this->renderable(function (\Exception $exception) {
+            return response()->json($exception->getMessage(), 500);
+        });
     }
 }
