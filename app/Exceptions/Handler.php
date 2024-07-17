@@ -27,6 +27,10 @@ class Handler extends ExceptionHandler
             //
         });
 
+        $this->renderable(function (\TypeError $typeError) {
+            return response()->error(500, $typeError->getMessage());
+        });
+
         $this->renderable(function (\Exception $exception) {
             return response()->json($exception->getMessage(), 500);
         });
