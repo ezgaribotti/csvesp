@@ -18,7 +18,7 @@ class ResponseMacroServiceProvider extends ServiceProvider
         });
 
         Response::macro('error', function (int $statusCode, ?string $message = null) {
-            if (!in_array($statusCode, [400, 401, 403, 404, 422, 503]))
+            if (!in_array($statusCode, [400, 401, 403, 404, 405, 422, 503]))
                 $statusCode = 500;
 
             return Response::json([
