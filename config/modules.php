@@ -101,7 +101,7 @@ return [
             'command' => ['path' => 'Console', 'generate' => false],
             'migration' => ['path' => 'database/migrations', 'generate' => true],
             'seeder' => ['path' => 'database/seeders', 'generate' => true],
-            'factory' => ['path' => 'database/factories', 'generate' => false],
+            'factory' => ['path' => 'database/factories', 'generate' => true],
             'model' => ['path' => 'Entities', 'generate' => true],
             'routes' => ['path' => 'routes', 'generate' => true],
             'controller' => ['path' => 'Http/Controllers', 'generate' => true],
