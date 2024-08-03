@@ -19,4 +19,6 @@ interface RepositoryInterface
     public function delete($id): void;
 
     public function count(): int;
+
+    public function builder(): object;
 }
